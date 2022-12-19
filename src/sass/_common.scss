@@ -1,1 +1,103 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 20;
+  line-height: 1.2;
+  color: $primeryTextColor;
+  background-color: $primeryBackgroundColor;
+
+  transition: color 300ms $cubicBezier, background-color 300ms $cubicBezier;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 20;
+    line-height: 1.2;
+  }
+
+  &.dark-theme {
+    background-color: #12181c;
+    color: #ffffff;
+  }
+
+  &.modal-open {
+    overflow: hidden;
+  }
+
+  &.uk .uk {
+    display: block;
+  }
+
+  &.uk .en {
+    display: none;
+  }
+
+  &.en .en {
+    display: block;
+  }
+
+  &.en .uk {
+    display: none;
+  }
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding-left: 0;
+}
+
+a,
+button,
+input,
+textarea {
+  outline: none;
+}
+
+address {
+  font-style: normal;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  @media screen and (max-width: 767px) {
+    max-width: 480px;
+  }
+  @media screen and (min-width: $tablet) {
+    padding: 0 32px;
+    width: $tablet;
+  }
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 300ms $cubicBezier;
+}
+
+button {
+  cursor: pointer;
+}

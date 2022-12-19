@@ -1,2 +1,15 @@
+@import './utils/vars';
+@import './utils/animation';
 @import './common';
-@import './example';
+@import './components/header/header';
+@import './components/header/thme-switcher';
+@import './components/header/language-switcher';
+@import './components/header/nav';
+@import './components/header/form';
+@import './components/header/error-text';
+@import './components/main/section';
+@import './components/footer/footer';
+@import './components/modal/general';
+@import './components/modal/movie-modal';
+
+

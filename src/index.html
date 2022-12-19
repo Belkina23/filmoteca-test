@@ -3,12 +3,131 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
+    <title>Filmoteka</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./sass/index.scss" />
     <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <header class="header home-header">
+      <div class="container">
+        <div class="utils">
+          <div class="theme-switch">
+            <label aria-hidden="true" class="theme-switch__track">
+              <input
+                class="theme-switch__toggle"
+                type="checkbox"
+                name="theme"
+                aria-label="Переключить между тёмной и светлой темой"
+              />
+              <svg
+                width="20"
+                class="theme-switch__icon theme-switch__icon--light"
+                role="img"
+                aria-label="Иконка солнца"
+              >
+                <use href="./images/sprite.svg#sun"></use>
+              </svg>
+              <svg
+                width="20"
+                class="theme-switch__icon theme-switch__icon--dark"
+                aria-label="Иконка луны"
+              >
+                <use href="./images/sprite.svg#moon"></use>
+              </svg>
+            </label>
+          </div>
+          <div class="language-switcher">
+            <label class="language-switcher__label">
+              <input
+                class="language-switcher__checkbox"
+                name="language"
+                type="checkbox"
+              />
+              <span class="language-switcher__lang">UA</span>
+            </label>
+          </div>
+        </div>
+        <nav class="nav">
+          <a class="link logo" href="./index.html" class="logo"
+            ><img src="./images/film.svg" alt="logo" /><span class="logo__text"
+              >Filmoteka</span
+            ></a
+          >
+          <ul class="list nav__list">
+            <li class="nav__item">
+              <a class="link nav__link nav__link--current" href="./index.html">
+                Home
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a class="link nav__link" href="./my-library.html"> My library</a>
+            </li>
+          </ul>
+        </nav>
+
+        <form class="form home__form">
+          <input
+            class="form_input"
+            name="query"
+            type="text"
+            placeholder="Movie search"
+          />
+          <button class="form__submit" type="submit">
+            <img width="12" src="./images/search.svg" alt="search" />
+          </button>
+        </form>
+        <div class="error-text">
+          <p class="en">
+            Search result not successful. Enter the correct movie name and try
+            again.
+          </p>
+          <p class="uk">
+            Результат пошуку невдалий. Введіть правильну назву фільму та
+            повторіть спробу.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section home__section">
+        <div class="container">
+          <ul class="list films-list"></ul>
+          <ul class="list pagination-list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="copy">
+          <p class="en">
+            &#169; 2020 | All Rights Reserved | Developed with
+            <img width="14" src="./images/favorite.svg" alt="favorite" />
+            by
+            <a class="copy__linhk" href="#">GoIT Students</a>
+          </p>
+
+          <p class="uk">
+            &#169; 2020 | Усі права захищено | Розроблено
+            <img
+              class="heart"
+              width="14"
+              src="./images/favorite.svg"
+              alt="favorite"
+            />
+            by
+            <a class="copy__linhk" href="#">Студентами GoIT</a>
+          </p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
